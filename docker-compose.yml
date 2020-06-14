@@ -5,7 +5,6 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - ./init_db:/docker-entrypoint-initdb.d
       - ./data_mysql:/var/lib/mysql
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
@@ -16,12 +15,18 @@ services:
   postgres:
     image: postgres:12.0-alpine
     environment:
-      - POSTGRES_DB=app
+      - POSTGRES_DB=postgres
       - POSTGRES_USER=app
       - POSTGRES_PASSWORD=pass
-      - PGPORT=5432
+
     ports:
       - '5432:5432'
 
     volumes:
       - ./data_postgres:/var/lib/postgresql
+
+  node-app:
+    build: ./gate-simulator
+    image: node-app:Dockerfile.0
+    ports:
+        - '9999:9999'
