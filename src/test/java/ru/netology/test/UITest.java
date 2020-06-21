@@ -9,7 +9,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.data.DataHelper;
 import ru.netology.data.SqlUtils;
-import ru.netology.page.CardData;
 import ru.netology.page.TripPage;
 
 import java.sql.SQLException;
@@ -37,7 +36,7 @@ public class UITest {
     }
 
     @Test
-    void shouldCheckIfSuccessWithValidDebitCard() throws SQLException {
+    void shouldSuccessWithValidDebitCard() throws SQLException {
         val tripPage = new TripPage();
         val CardData = tripPage.selectBuyByDebitCard();
         val validCardInformation = DataHelper.getValidCardInformation();
@@ -52,7 +51,7 @@ public class UITest {
     }
 
     @Test
-    void shouldCheckIfSuccessWithValidCreditCard() throws SQLException {
+    void shouldSuccessWithValidCreditCard() throws SQLException {
         val tripPage = new TripPage();
         val CardData = tripPage.selectBuyByCreditCard();
         val validCardInformation = DataHelper.getValidCardInformation();
@@ -64,7 +63,7 @@ public class UITest {
     }
 
     @Test
-    void shouldCheckIfNotSuccessWithInvalidDebitCard() throws SQLException {
+    void shouldNotSuccessWithInvalidDebitCard() throws SQLException {
         val tripPage = new TripPage();
         val CardData = tripPage.selectBuyByDebitCard();
         val invalidCardInformation = DataHelper.getInvalidCardInformation();
@@ -76,7 +75,7 @@ public class UITest {
     }
 
     @Test
-    void shouldCheckIfNotSuccessWithInvalidCreditCard() throws SQLException {
+    void shouldNotSuccessWithInvalidCreditCard() throws SQLException {
         val tripPage = new TripPage();
         val CardData = tripPage.selectBuyByCreditCard();
         val validCardInformation = DataHelper.getInvalidCardInformation();
@@ -88,7 +87,7 @@ public class UITest {
     }
 
     @Test
-    void shouldCheckIfNotSuccessWithWrongCardNumber() {
+    void shouldNotSuccessWithWrongCardNumber() {
         val tripPage = new TripPage();
         val CardData = tripPage.selectBuyByCreditCard();
         val invalidCardInformation = DataHelper.getCardInformationWithWrongLongCardNumber();
@@ -100,7 +99,7 @@ public class UITest {
     }
 
     @Test
-    void shouldCheckIfNotSuccessWithShortestCardNumber() {
+    void shouldNotSuccessWithShortestCardNumber() {
         val tripPage = new TripPage();
         val CardData = tripPage.selectBuyByCreditCard();
         val invalidCardInformation = DataHelper.getCardInformationWithShortestCardNumber();
@@ -112,7 +111,7 @@ public class UITest {
     }
 
     @Test
-    void shouldCheckIfNotSuccessWithWrongMonth() {
+    void shouldNotSuccessWithWrongMonth() {
         val tripPage = new TripPage();
         val CardData = tripPage.selectBuyByCreditCard();
         val invalidCardInformation = DataHelper.getCardInformationWithWrongMonth();
@@ -124,7 +123,7 @@ public class UITest {
     }
 
     @Test
-    void shouldCheckIfNotSuccessWithWrongYear() {
+    void shouldNotSuccessWithWrongYear() {
         val tripPage = new TripPage();
         val CardData = tripPage.selectBuyByCreditCard();
         val invalidCardInformation = DataHelper.getCardInformationWithWrongYear();
@@ -136,7 +135,7 @@ public class UITest {
     }
 
     @Test
-    void shouldCheckIfNotSuccessWithWrongYearFromOneNumber() {
+    void shouldNotSuccessWithWrongYearFromOneNumber() {
         val tripPage = new TripPage();
         val CardData = tripPage.selectBuyByCreditCard();
         val invalidCardInformation = DataHelper.getCardInformationWithWrongYearWithOneNumber();
@@ -148,7 +147,7 @@ public class UITest {
     }
 
     @Test
-    void shouldCheckIfNotSuccessWithWrongCVC() {
+    void shouldNotSuccessWithWrongCVC() {
         val tripPage = new TripPage();
         val CardData = tripPage.selectBuyByCreditCard();
         val invalidCardInformation = DataHelper.getCardInformationWithWrongCvc();
@@ -160,7 +159,7 @@ public class UITest {
     }
 
     @Test
-    void shouldCheckIfNotSuccessWithWrongName() {
+    void shouldNotSuccessWithWrongName() {
         val tripPage = new TripPage();
         val CardData = tripPage.selectBuyByCreditCard();
         val invalidCardInformation = DataHelper.getCardInformationWithWrongHolderName();
@@ -172,7 +171,7 @@ public class UITest {
     }
 
     @Test
-    void shouldCheckIfNotSuccessWithoutName() {
+    void shouldNotSuccessWithoutName() {
         val tripPage = new TripPage();
         val CardData = tripPage.selectBuyByCreditCard();
         val invalidCardInformation = DataHelper.getCardInformationWithoutName();
