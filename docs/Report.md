@@ -24,6 +24,11 @@
 
 **81.25%** тест-кейсов прошли успешно, **18,75%** тестов прошли не успешно(при запуске тестов локально из IntelliJ Idea количество успешно пройденных тестов падает до 68,75). 
 
+![Тесты через терминал](https://github.com/ggamarin/Diplom/blob/master/docs/screenshots/%D0%90%D0%BD%D0%BD%D0%BE%D1%82%D0%B0%D1%86%D0%B8%D1%8F%202020-06-21%20184228.png)
+
+
+![Тесты локально](https://github.com/ggamarin/Diplom/blob/master/docs/screenshots/%D0%90%D0%BD%D0%BD%D0%BE%D1%82%D0%B0%D1%86%D0%B8%D1%8F%202020-06-21%20185932.png)
+
 По итогам тестирования **обнаружено 8 багов**. 
 
 По всем багам заведены [Issues](https://github.com/ggamarin/Diplom/issues).
