@@ -5,6 +5,7 @@
 ## Документация проекта
 * [План автоматизации тестирования](https://github.com/ggamarin/Diplom/blob/master/docs/Plan.md)
 * [Отчет по итогам автоматизированного тестирования](https://github.com/ggamarin/Diplom/blob/master/docs/Report.md)
+* [Отчет по итогам автоматизации](https://github.com/ggamarin/Diplom/blob/master/docs/Summary.md)
      
 ### Необходимое окружение: 
  * установленный Node.js;
